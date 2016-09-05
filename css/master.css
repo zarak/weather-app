@@ -1,0 +1,21 @@
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.main {
+  text-align: center;
+}
+
+.temperature {
+  width: 100px;
+  margin: 0 auto;
+}
