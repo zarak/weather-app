@@ -9,6 +9,8 @@ function displayLocation(position) {
   var geo_url = "https://api.wunderground.com/api/" + API_KEY + "/geolookup/q/" + latitude + "," + longitude + ".json";
   
   $.getJSON(geo_url,  function(json1) {
+    var city = json1.location.city;
+    var country = json1.location.country_name;
     h4Location.innerHTML += city + ", " + country;
     
     var weather_url = "https://api.wunderground.com/api/" + API_KEY + "/conditions/q/" + latitude + "," + longitude + ".json";
