@@ -9,24 +9,11 @@ function displayLocation(position) {
   var geo_url = "https://api.wunderground.com/api/" + API_KEY + "/geolookup/q/" + latitude + "," + longitude + ".json";
   
   $.getJSON(geo_url,  function(json1) {
-    var city = json1.location.city;
-    var country = json1.location.country_name;
-    var request_url = json1.location.requesturl;
-    console.log(request_url);
-    
-    city = city.replace(" ", "_");
-    country = country.replace(" ", "_");
-    
     h4Location.innerHTML += city + ", " + country;
     
-    if (country === "USA") {
-      country = json1.location.state;
-    }
-    
-    var weather_url = "https://api.wunderground.com/api/ec3d4205c1695db6/conditions/q/" + latitude + "," + longitude + ".json";
+    var weather_url = "https://api.wunderground.com/api/" + API_KEY + "/conditions/q/" + latitude + "," + longitude + ".json";
     
     $.getJSON(weather_url, function(json2) {
-      console.log(typeof(json2));
       var temp_c = JSON.stringify(json2.current_observation.temp_c);
       var temp_f = JSON.stringify(json2.current_observation.temp_f);
       
@@ -46,7 +33,6 @@ function displayError(error) {
   var message = errors[error.code];
   console.warn("Error in getting your location: " + message, error.message);
 }
-
 
 window.onload = function() {
   if (navigator.geolocation) {
