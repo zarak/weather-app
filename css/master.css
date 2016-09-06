@@ -1,21 +1,58 @@
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
+
 body {
   height: 100%;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
 a:hover {
+  text-decoration: none;
   cursor: pointer;
   cursor: hand;
 }
 
 .main {
+  font-family: 'Orbitron', sans-serif;
+  color: rgba(255,255,255,0.6);
   text-align: center;
 }
 
+#bg-video {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+}
+
+@media screen and (min-width: 600px)  {
+}
+
 .temperature {
-  width: 100px;
+  width: 500px;
   margin: 0 auto;
+}
+
+#weather-icon {
+  font-size: 150px;
+}
+
+#celsius, #fahrenheit {
+  font-size: 100px;
+  font-weight: bolder;
+}
+
+i {
+  margin: 7px;
 }

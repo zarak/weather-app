@@ -14,20 +14,33 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-  </head>
-  <body>
+</head>
+<body>
+  <div class="container-fluid">
+    <video id="bg-video" playsinline autoplay muted loop>
+<source src="https://s3.amazonaws.com/zarak-videos/trimmed_stars.mp4" type="video/mp4">
+</video>
     <div class="main">
-      <h1>Weather App</h1>
-      <h4 id="location"></h4>
-      <div class="temperature">
-        <a>
-          <p id="celsius"></p>
-        </a>
-        <a>
-          <p id="fahrenheit"></p>
-        </a>
+      <div class="row">
+        <h1>Weather App</h1>
       </div>
-      <div id="description"></div>
+      <div class="row">
+        <h2 id="location"></h2>
+      </div>
+      <div class="row">
+        <div class="temperature">
+          <a>
+            <p id="celsius"></p>
+          </a>
+          <a>
+            <p id="fahrenheit"></p>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div id="weather-icon"></div>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
