@@ -14,7 +14,7 @@ h1.title {
   font-weight: bold;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: none;
   cursor: pointer;
   cursor: hand;
@@ -40,7 +40,6 @@ a:hover {
 }
 
 .temperature {
-  width: 500px;
   margin: 0 auto;
 }
 
