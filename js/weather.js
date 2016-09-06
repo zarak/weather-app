@@ -27,8 +27,8 @@ function displayLocation(position) {
     
     $.getJSON(weather_url, function(json2) {
       console.log(typeof(json2));
-      var temp_c = JSON.stringify(json2.current_observation.temp_c);
-      var temp_f = JSON.stringify(json2.current_observation.temp_f);
+      var temp_c = Math.round(json2.current_observation.temp_c);
+      var temp_f = Math.round(json2.current_observation.temp_f);
       
       var dict = {};
       dict.flurries = "wi-snow";
