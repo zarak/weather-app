@@ -33,12 +33,15 @@ a, .link {
   z-index: -1000;
 }
 
-@media screen and (min-width: 600px)  {
-    h1.title: font-size: 36px;
+@media screen and (max-width: 600px)  {
+    h1.title {
+        font-size: 36px;
+    }
 }
 
 .temperature {
   margin: 0 auto;
+  width: 270px;
 }
 
 #weather-icon {
