@@ -14,14 +14,7 @@ function displayLocation(position) {
     var request_url = json1.location.requesturl;
     console.log(request_url);
     
-    city = city.replace(" ", "_");
-    country = country.replace(" ", "_");
-    
     h4Location.innerHTML += city + ", " + country;
-    
-    if (country === "USA") {
-      country = json1.location.state;
-    }
     
     var weather_url = "https://api.wunderground.com/api/ec3d4205c1695db6/conditions/q/" + latitude + "," + longitude + ".json";
     
